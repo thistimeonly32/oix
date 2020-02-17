@@ -1,0 +1,8 @@
+{
+  "name": "oix",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "184dfaf2"
+}
