@@ -14,10 +14,13 @@ import { ChangePasswordComponent } from "./pages/auth/change-password/change-pas
 import { JobListingComponent } from "./pages/job-listing/job-listing.component";
 import { TestComponent } from "./pages/test/test.component";
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
-import { JobViewComponent } from './pages/job-view/job-view.component';
-import { HeaderComponent } from './pages/layout/header/header.component';
-import { FooterComponent } from './pages/layout/footer/footer.component';
-import { SidenavComponent } from './pages/layout/sidenav/sidenav.component';
+import { JobViewComponent } from "./pages/job-view/job-view.component";
+import { HeaderComponent } from "./pages/layout/header/header.component";
+import { FooterComponent } from "./pages/layout/footer/footer.component";
+import { SidenavComponent } from "./pages/layout/sidenav/sidenav.component";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { HttpInterceptorService } from "./service/http-interceptor.service";
 
 @NgModule({
   declarations: [
@@ -34,11 +37,23 @@ import { SidenavComponent } from './pages/layout/sidenav/sidenav.component';
     SidenavComponent
   ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

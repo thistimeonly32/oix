@@ -7,28 +7,33 @@ import { JobListingComponent } from "./pages/job-listing/job-listing.component";
 import { TestComponent } from "./pages/test/test.component";
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 import { JobViewComponent } from "./pages/job-view/job-view.component";
+import { UrlService } from "./service/url.service";
+import {
+  LoginAuthGuardService,
+  SeDashboardAuthGuardService
+} from "./service/auth-guard.service";
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
-  // {
-  //   path: "login",
-  //   loadChildren: () => import("./home/home.module").then(m => m.HomePageModule)
-  // },
   {
-    path: "login",
-    component: LoginComponent
+    path: UrlService.LOGIN,
+    component: LoginComponent,
+    canActivate: [LoginAuthGuardService]
   },
   {
-    path: "forgot-password",
-    component: ForgotPasswordComponent
+    path: UrlService.FORGOT_PASSWORD,
+    component: ForgotPasswordComponent,
+    canActivate: [LoginAuthGuardService]
   },
   {
-    path: "change-password",
-    component: ChangePasswordComponent
+    path: UrlService.CHANGE_PASSWORD,
+    component: ChangePasswordComponent,
+    canActivate: [SeDashboardAuthGuardService]
   },
   {
-    path: "se-dashboard",
-    component: JobListingComponent
+    path: UrlService.SE_DASHBOARD,
+    component: JobListingComponent,
+    canActivate: [SeDashboardAuthGuardService]
   },
   {
     path: "test",
@@ -39,8 +44,9 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: "job-view",
-    component: JobViewComponent
+    path: UrlService.VIEW_JOB,
+    component: JobViewComponent,
+    canActivate: [SeDashboardAuthGuardService]
   }
 ];
 

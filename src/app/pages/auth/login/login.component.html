@@ -8,18 +8,25 @@
       <div class="card-body login-card-body">
         <p class="login-box-msg">Sign In</p>
 
-        <form>
+        <form [formGroup]="loginForm">
           <div class="input-group mb-3">
-            <input type="email" class="form-control form-control-lg" placeholder="Email" />
+            <input
+              type="email"
+              class="form-control form-control-lg"
+              placeholder="Email"
+              formControlName="email"
+            />
             <div class="input-group-append input-group-text">
               <span class="fas fa-envelope"></span>
             </div>
+            
           </div>
           <div class="input-group mb-3">
             <input
               type="password"
               class="form-control form-control-lg"
               placeholder="Password"
+              formControlName="password"
             />
             <div class="input-group-append input-group-text">
               <span class="fas fa-lock"></span>
@@ -43,11 +50,18 @@
         </form>
 
         <div class="social-auth-links text-center mb-3">
-          <button [routerLink]="['/se-dashboard']" type="button" class="btn btn-block btn-flat btn-info btn-lg">
+          <button
+            [disabled]="!loginForm.valid || loginApiLoader"
+            (click)="loginBtnClick()"
+            type="button"
+            class="btn btn-block btn-flat btn-info btn-lg"
+          >
             <i class="fas fa-id-badge mr-2"></i> Sign In
+            <i *ngIf="loginApiLoader" class="fa fa-refresh fa-spin"></i>
           </button>
           <button
-            [routerLink]="['/forgot-password']"
+            [disabled]="!loginForm.valid || loginApiLoader"
+            [routerLink]="['/', urlServ.FORGOT_PASSWORD]"
             routerLinkActive="router-link-active"
             type="button"
             class="btn btn-block btn-flat btn-light btn-lg"
