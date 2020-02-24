@@ -21,6 +21,13 @@ import { SidenavComponent } from "./pages/layout/sidenav/sidenav.component";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { HttpInterceptorService } from "./service/http-interceptor.service";
+import { ChecklistFireAlarmSystemComponent } from './pages/checklist-fire-alarm-system/checklist-fire-alarm-system.component';
+import { SaveJobComponent } from './pages/save-job/save-job.component';
+import { ServiceHeaderComponent } from './pages/service-header/service-header.component';
+import { VesdaSystemComponent } from './pages/vesda-system/vesda-system.component';
+import { FiremanIntercomSystemComponent } from './pages/fireman-intercom-system/fireman-intercom-system.component';
+import { HosFireExtSystemComponent } from './pages/hos-fire-ext-system/hos-fire-ext-system.component';
+import { SprinklerHosereelSystemIonComponent } from './pages/sprinkler-hosereel-system-ion/sprinkler-hosereel-system-ion.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +41,14 @@ import { HttpInterceptorService } from "./service/http-interceptor.service";
     JobViewComponent,
     HeaderComponent,
     FooterComponent,
-    SidenavComponent
+    SidenavComponent,
+    SaveJobComponent,
+    ServiceHeaderComponent,
+    ChecklistFireAlarmSystemComponent,
+    VesdaSystemComponent,
+    FiremanIntercomSystemComponent,
+    HosFireExtSystemComponent,
+    SprinklerHosereelSystemIonComponent
   ],
   entryComponents: [],
   imports: [

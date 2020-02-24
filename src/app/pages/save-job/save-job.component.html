@@ -1,0 +1,93 @@
+<ion-content>
+  <!-- Site wrapper -->
+  <div class="wrapper">
+    <!-- Navbar -->
+    <app-header></app-header>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Client Signature</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <!-- Default box -->
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <form [formGroup]="jobForm">
+                  <!-- text input -->
+                  <div class="form-group nbm">
+                    <textarea
+                      disabled
+                      class="form-control"
+                      rows="8"
+                      placeholder="Signature pad"
+                    ></textarea>
+                  </div>
+                  <div class="form-group nbm">
+                    <label>Quotation required : </label>
+                    <div>
+                      <input
+                        formControlName="quotationRequired"
+                        type="radio"
+                        value="1"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Yes</label>&nbsp;&nbsp;
+                      <input
+                        value="0"
+                        formControlName="quotationRequired"
+                        type="radio"
+                      />
+                      <label class="q-font">&nbsp;No</label>
+                    </div>
+                  </div>
+                  <!-- textarea -->
+                  <div class="form-group nbm">
+                    <label>Quotation : </label>
+                    <input
+                      type="text"
+                      formControlName="quotation"
+                      class="form-control"
+                      placeholder="Enter Quotation..."
+                    />
+                  </div>
+                </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+          </div>
+        </div>
+        <br />
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <footer class="main-footer">
+      <div class="row">
+        <div class="col-12">
+          <a
+            style="color: white;"
+            x
+            class="btn btn-info btn-info btn-flat btn-block"
+          >
+            Submit
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- ./wrapper -->
+</ion-content>

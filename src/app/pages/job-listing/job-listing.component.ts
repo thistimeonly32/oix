@@ -2,6 +2,9 @@ import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthService } from "src/app/service/auth.service";
 import { UrlService } from "src/app/service/url.service";
+import { User } from "src/app/model/user";
+import { JobsResponse } from "src/app/model/jobs-response";
+import { ApiService } from "src/app/service/api.service";
 
 @Component({
   selector: "app-job-listing",
@@ -9,15 +12,30 @@ import { UrlService } from "src/app/service/url.service";
   styleUrls: ["./job-listing.component.scss"]
 })
 export class JobListingComponent implements OnInit {
-  constructor(private router: Router, private authServ: AuthService) {}
+  loggedUser: User;
+  jobs: JobsResponse;
+  urlServ: UrlService = UrlService;
 
-  ngOnInit() {
-    document.body.className =
-      "hold-transition sidebar-mini layout-navbar-fixed layout-footer-fixed";
+  constructor(
+    private router: Router,
+    private authServ: AuthService,
+    private apiServ: ApiService
+  ) {}
+
+  ngOnInit() {}
+
+  ionViewWillEnter() {
+    this.loggedUser = this.authServ.getUser();
+    this.getJobs();
   }
 
-  logout() {
-    this.authServ.logout();
-    this.router.navigateByUrl(UrlService.LOGIN);
+  getJobs() {
+    this.apiServ
+      .getAllJobs(this.loggedUser.id)
+      .then((jobs: JobsResponse) => {
+        this.jobs = jobs;
+      })
+      .catch((error: any) => {})
+      .then(() => {});
   }
 }

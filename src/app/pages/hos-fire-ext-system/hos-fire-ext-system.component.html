@@ -1,0 +1,252 @@
+<ion-content>
+  <!-- Site wrapper -->
+  <div class="wrapper">
+    <!-- Navbar -->
+    <app-header></app-header>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+
+      <app-service-header></app-service-header>
+
+      <section class="content">
+        <!-- Default box -->
+
+        <form>
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 1 ? 'block' : 'none' }"
+          >
+            <div class="col-12 ">
+              <div class="card card-info card-outline">
+                <div class="card-header group-heading">
+                  <b>Hosereel System</b>
+                </div>
+                <div class="card-body q-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font">Turn on stopcock fully.</span>
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font"
+                          >Check for leakage at drum joint, hose and
+                          nozzle.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font">Turn off stopcock.</span>
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font">Pull out hose.</span>
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font">Turn on nozzle. </span>
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font">Pull out hose.</span>
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font"
+                          >Check required length of water throw.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font"
+                          >To clear all remaining water in hose.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font"
+                          >To clear all remaining water in hose.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font"
+                          >Check required length of water throw.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font">Roll back hose.</span>
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font"
+                          >Give a general cleaning of hose reel.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 2 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info card-outline">
+                <div class="card-header group-heading">
+                  <b>Fire Extinguisher</b>
+                </div>
+                <div class="card-body q-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font"
+                          >Check Exinguisher pressure gauge reading is correct
+                          within the green sector and that the safety pin is
+                          intact. Do not remove the safety pin until required,
+                          as it has been designed to break on removal.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font"
+                          >Visual check the Fire Extiguisher if it does not have
+                          any corrosion.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font"
+                          >Heft the cylinder and refill content if
+                          necessary.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font"
+                          >Check the Fire Extinguisher if Dry/Powder by
+                          overturning it.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font"
+                          >Remove the existing Fire Extinguisher label.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input type="checkbox" class="chk" />
+                        <span class="q-font"
+                          >Replace new inspection label with the service date
+                          and expired date.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 2 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info">
+                <div class="card-body">
+                  <div class="form-group nbm">
+                    <label class="question">Exposure to Fire Risk : </label>
+                    <div>
+                      <input type="radio" checked />
+                      <label class="q-font">&nbsp;Yes</label>&nbsp;&nbsp;
+                      <input type="radio" />
+                      <label class="q-font">&nbsp;No</label>
+                    </div>
+                   
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Follow-up Action : </label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="row d-flex align-items-stretch service-action">
+          <div class="col-6">
+            <a
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              *ngIf="currentPage == totalPage"
+            >
+              Save
+            </a>
+          </div>
+          <div class="col-3">
+            <a
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              (click)="back()"
+              *ngIf="currentPage != 1"
+            >
+              Back
+            </a>
+          </div>
+          <div class="col-3">
+            <a
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              (click)="next()"
+              *ngIf="currentPage != totalPage"
+            >
+              Next
+            </a>
+          </div>
+        </div>
+
+        <br />
+        <br />
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <footer class="main-footer">
+      <div class="row">
+        <div class="col-6">
+          <a
+            style="color: white;"
+            (click)="timeout()"
+            class="btn btn-info btn-info btn-flat btn-block"
+          >
+            Time Out
+          </a>
+        </div>
+        <div class="col-6">
+          <a
+            style="color: white;"
+            class="btn btn-info btn-info btn-flat btn-block"
+          >
+            Break
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- ./wrapper -->
+</ion-content>

@@ -12,6 +12,12 @@ import {
   LoginAuthGuardService,
   SeDashboardAuthGuardService
 } from "./service/auth-guard.service";
+import { ChecklistFireAlarmSystemComponent } from "./pages/checklist-fire-alarm-system/checklist-fire-alarm-system.component";
+import { SaveJobComponent } from "./pages/save-job/save-job.component";
+import { VesdaSystemComponent } from "./pages/vesda-system/vesda-system.component";
+import { HosFireExtSystemComponent } from "./pages/hos-fire-ext-system/hos-fire-ext-system.component";
+import { SprinklerHosereelSystemIonComponent } from "./pages/sprinkler-hosereel-system-ion/sprinkler-hosereel-system-ion.component";
+import { FiremanIntercomSystemComponent } from "./pages/fireman-intercom-system/fireman-intercom-system.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
@@ -46,6 +52,36 @@ const routes: Routes = [
   {
     path: UrlService.VIEW_JOB,
     component: JobViewComponent,
+    canActivate: [SeDashboardAuthGuardService]
+  },
+  {
+    path: UrlService.SAVE_JOB,
+    component: SaveJobComponent,
+    canActivate: [SeDashboardAuthGuardService]
+  },
+  {
+    path: UrlService.CHECKLIST_FIRE_ALARM_SYSTEM,
+    component: ChecklistFireAlarmSystemComponent,
+    canActivate: [SeDashboardAuthGuardService]
+  },
+  {
+    path: UrlService.CHECKLIST_VESDA_SYSTEM,
+    component: VesdaSystemComponent,
+    canActivate: [SeDashboardAuthGuardService]
+  },
+  {
+    path: UrlService.CHECKLIST_HOSEREEL_SYSTEM_FIRE_EXTINGUISHER_SYSTEM,
+    component: HosFireExtSystemComponent,
+    canActivate: [SeDashboardAuthGuardService]
+  },
+  {
+    path: UrlService.CHECKLIST_SPRINKLER_SYSTEM_HOSEREEL_SYSTEM_ION,
+    component: SprinklerHosereelSystemIonComponent,
+    canActivate: [SeDashboardAuthGuardService]
+  },
+  {
+    path: UrlService.CHECKLIST_FIREMAN_INTERCOM_SYSTEM,
+    component: FiremanIntercomSystemComponent,
     canActivate: [SeDashboardAuthGuardService]
   }
 ];

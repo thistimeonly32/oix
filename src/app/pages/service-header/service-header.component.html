@@ -1,0 +1,57 @@
+<section class="content-header service-header">
+  <form [formGroup]="headerForm">
+    <div class="row">
+      <div class="col-6">
+        <label>
+          Client :
+        </label>
+        {{ servData.job.clientName }}
+      </div>
+      <div class="col-6">
+        <label>
+          Date :
+        </label>
+        {{ currentDate | date: "dd/MM/yyyy" }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <select
+          formControlName="attendance"
+          class="form-control header-drop-down"
+        >
+          <!-- <option value="">Select Attendance</option> -->
+          <option *ngFor="let obj of constant.ATTENDANCE" [value]="obj?.id">{{
+            obj?.type
+          }}</option>
+        </select>
+      </div>
+      <div class="col-6">
+        <select
+          formControlName="checkInTime"
+          class="form-control header-drop-down"
+        >
+          <!-- <option>Select Check In</option> -->
+          <option
+            *ngFor="let obj of constant.CHECK_IN_TIME"
+            [value]="obj?.id"
+            >{{ obj?.type }}</option
+          >
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6"></div>
+      <div class="col-6">
+        <select formControlName="service" class="form-control header-drop-down">
+          <option
+            *ngFor="let obj of constant.SERVICES"
+            value="{{ obj?.service_type_id }}"
+            >{{ obj?.name }}</option
+          >
+        </select>
+      </div>
+    </div>
+  </form>
+  <!-- /.container-fluid -->
+</section>
