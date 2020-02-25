@@ -13,7 +13,7 @@
       <section class="content">
         <!-- Default box -->
 
-        <form>
+        <form [formGroup]="servForm">
           <div
             class="row"
             [ngStyle]="{ display: currentPage == 1 ? 'block' : 'none' }"
@@ -27,64 +27,126 @@
                   <div class="row">
                     <div class="col-12">
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q1"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font">Turn on stopcock fully.</span>
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q2"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font"
                           >Check for leakage at drum joint, hose and
                           nozzle.</span
                         >
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q3"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font">Turn off stopcock.</span>
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q4"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">Turn off stopcock.</span>
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q5"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font">Pull out hose.</span>
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q6"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font">Turn on nozzle. </span>
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
-                        <span class="q-font">Pull out hose.</span>
+                        <input
+                          formControlName="checkbox_q7"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">Turn on stopcock fully.</span>
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q8"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font"
                           >Check required length of water throw.</span
                         >
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q9"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">Turn off stopcock.</span>
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q10"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font"
                           >To clear all remaining water in hose.</span
                         >
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
-                        <span class="q-font"
-                          >To clear all remaining water in hose.</span
-                        >
+                        <input
+                          formControlName="checkbox_q11"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">Turn off nozzle.</span>
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
-                        <span class="q-font"
-                          >Check required length of water throw.</span
-                        >
-                      </div>
-                      <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q12"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font">Roll back hose.</span>
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
-                        <span class="q-font"
-                          >Give a general cleaning of hose reel.</span
+                        <input
+                          formControlName="checkbox_q13"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Give a general cleaning of hose reel.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q14"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Give a general cleaning of hose reel.</span
                         >
                       </div>
                     </div>
@@ -107,7 +169,11 @@
                   <div class="row">
                     <div class="col-12">
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q15"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font"
                           >Check Exinguisher pressure gauge reading is correct
                           within the green sector and that the safety pin is
@@ -116,34 +182,54 @@
                         >
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q16"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font"
                           >Visual check the Fire Extiguisher if it does not have
                           any corrosion.</span
                         >
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q17"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font"
                           >Heft the cylinder and refill content if
                           necessary.</span
                         >
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q18"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font"
                           >Check the Fire Extinguisher if Dry/Powder by
                           overturning it.</span
                         >
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q19"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font"
                           >Remove the existing Fire Extinguisher label.</span
                         >
                       </div>
                       <div class="q-div">
-                        <input type="checkbox" class="chk" />
+                        <input
+                          formControlName="checkbox_q20"
+                          type="checkbox"
+                          class="chk"
+                        />
                         <span class="q-font"
                           >Replace new inspection label with the service date
                           and expired date.</span
@@ -164,19 +250,32 @@
               <div class="card card-info">
                 <div class="card-body">
                   <div class="form-group nbm">
+                    <label class="question">Remarks: </label>
+                    <textarea
+                      formControlName="remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
                     <label class="question">Exposure to Fire Risk : </label>
                     <div>
-                      <input type="radio" checked />
+                      <input
+                        formControlName="exposure_fire_risk"
+                        type="radio"
+                        checked
+                      />
                       <label class="q-font">&nbsp;Yes</label>&nbsp;&nbsp;
                       <input type="radio" />
                       <label class="q-font">&nbsp;No</label>
                     </div>
-                   
                   </div>
 
                   <div class="form-group nbm">
                     <label class="question">Follow-up Action : </label>
                     <textarea
+                      formControlName="follow_up_action"
                       class="form-control"
                       rows="3"
                     ></textarea>
@@ -187,15 +286,17 @@
           </div>
         </form>
 
-        <div class="row d-flex align-items-stretch service-action">
+        <div class="row service-action">
           <div class="col-6">
-            <a
+            <button
+              [disabled]="loader"
               style="color: white;"
               class="btn btn-info btn-flat btn-block"
               *ngIf="currentPage == totalPage"
+              (click)="save()"
             >
-              Save
-            </a>
+              Save <i *ngIf="loader" class="fa fa-refresh fa-spin"></i>
+            </button>
           </div>
           <div class="col-3">
             <a
@@ -226,27 +327,7 @@
     </div>
     <!-- /.content-wrapper -->
 
-    <footer class="main-footer">
-      <div class="row">
-        <div class="col-6">
-          <a
-            style="color: white;"
-            (click)="timeout()"
-            class="btn btn-info btn-info btn-flat btn-block"
-          >
-            Time Out
-          </a>
-        </div>
-        <div class="col-6">
-          <a
-            style="color: white;"
-            class="btn btn-info btn-info btn-flat btn-block"
-          >
-            Break
-          </a>
-        </div>
-      </div>
-    </footer>
+    <app-service-footer></app-service-footer>
   </div>
   <!-- ./wrapper -->
 </ion-content>

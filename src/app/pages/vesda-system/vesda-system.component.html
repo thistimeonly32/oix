@@ -1,3 +1,481 @@
-<p>
-  vesda-system works!
-</p>
+<ion-content>
+  <!-- Site wrapper -->
+  <div class="wrapper">
+    <!-- Navbar -->
+    <app-header></app-header>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+
+      <app-service-header></app-service-header>
+
+      <section class="content">
+        <!-- Default box -->
+
+        <form [formGroup]="servForm">
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 1 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info">
+                <div class="card-header group-heading">
+                  <b>VESDA CHARGER PANEL</b>
+                </div>
+                <div class="card-body">
+                  <div class="form-group nbm">
+                    <label class="question">Mains Supply/Charger : </label>
+                    <div>
+                      <input
+                        formControlName="q1_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q1_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q1_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Batteries : </label>
+                    <div>
+                      <input
+                        formControlName="q2_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q2_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q2_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Switches/Indicator/Audio : </label>
+                    <div>
+                      <input
+                        formControlName="q3_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q3_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q3_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 1 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info">
+                <div class="card-header group-heading">
+                  <b
+                    >INPUT/OUTPUT AUX SIGNAL * State Details in Service Report
+                    Annex A</b
+                  >
+                </div>
+                <div class="card-body">
+                  <div class="form-group nbm">
+                    <label class="question">Main Alarm Panel : </label>
+                    <div>
+                      <input
+                        formControlName="q4_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q4_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q4_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Alarm Bell/Siren : </label>
+                    <div>
+                      <input
+                        formControlName="q5_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q5_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q5_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Beacon Lights : </label>
+                    <div>
+                      <input
+                        formControlName="q6_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q6_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q6_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Smoke Detectors : </label>
+                    <div>
+                      <input
+                        formControlName="q7_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q7_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q7_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">A/C./Fan Shut Down : </label>
+                    <div>
+                      <input
+                        formControlName="q8_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q8_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q8_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Lift Homing/Door Control : </label>
+                    <div>
+                      <input
+                        formControlName="q9_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q9_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q9_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Fire Transmitting Signal : </label>
+                    <div>
+                      <input
+                        formControlName="q10_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q10_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q10_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 2 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info">
+                <div class="card-header group-heading">
+                  <b>VESDA SYSTEM</b>
+                </div>
+                <div class="card-body">
+                  <div class="form-group nbm">
+                    <label class="question">Pipe network : </label>
+                    <div>
+                      <input
+                        formControlName="q11_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q11_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q11_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Airflow : </label>
+                    <div>
+                      <input
+                        formControlName="q12_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q12_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q12_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Aspirator : </label>
+                    <div>
+                      <input
+                        formControlName="q13_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q13_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q13_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Filter : </label>
+                    <div>
+                      <input
+                        formControlName="q14_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q14_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q14_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Sampling holes : </label>
+                    <div>
+                      <input
+                        formControlName="q15_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q15_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q15_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 2 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info">
+                <div class="card-body">
+                  <div class="form-group nbm">
+                    <label class="question">Remarks: </label>
+                    <textarea
+                      formControlName="remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Exposure to Fire Risk : </label>
+                    <div>
+                      <input
+                        formControlName="exposure_fire_risk"
+                        type="radio"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Yes</label>&nbsp;&nbsp;
+                      <input type="radio" />
+                      <label class="q-font">&nbsp;No</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Follow-up Action : </label>
+                    <textarea
+                      formControlName="follow_up_action"
+                      class="form-control"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="row service-action">
+          <div class="col-6">
+            <button
+              [disabled]="loader"
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              *ngIf="currentPage == totalPage"
+              (click)="save()"
+            >
+              Save <i *ngIf="loader" class="fa fa-refresh fa-spin"></i>
+            </button>
+          </div>
+          <div class="col-3">
+            <a
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              (click)="back()"
+              *ngIf="currentPage != 1"
+            >
+              Back
+            </a>
+          </div>
+          <div class="col-3">
+            <a
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              (click)="next()"
+              *ngIf="currentPage != totalPage"
+            >
+              Next
+            </a>
+          </div>
+        </div>
+
+        <br />
+        <br />
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <app-service-footer></app-service-footer>
+  </div>
+  <!-- ./wrapper -->
+</ion-content>

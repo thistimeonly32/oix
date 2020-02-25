@@ -1,5 +1,5 @@
 <section class="content-header service-header">
-  <form [formGroup]="headerForm">
+  <form>
     <div class="row">
       <div class="col-6">
         <label>
@@ -17,36 +17,45 @@
     <div class="row">
       <div class="col-6">
         <select
-          formControlName="attendance"
+          (change)="onAttendanceChange($event.target.value)"
           class="form-control header-drop-down"
         >
           <!-- <option value="">Select Attendance</option> -->
-          <option *ngFor="let obj of constant.ATTENDANCE" [value]="obj?.id">{{
-            obj?.type
-          }}</option>
+          <option
+            *ngFor="let obj of constant.ATTENDANCE"
+            [value]="obj?.id"
+            [selected]="obj?.id == servData?.attendance"
+            >{{ obj?.type }}</option
+          >
         </select>
       </div>
       <div class="col-6">
         <select
-          formControlName="checkInTime"
+          (change)="onCheckInTimeChange($event.target.value)"
           class="form-control header-drop-down"
         >
           <!-- <option>Select Check In</option> -->
           <option
             *ngFor="let obj of constant.CHECK_IN_TIME"
             [value]="obj?.id"
+            [selected]="obj?.id == servData?.checkInTime"
             >{{ obj?.type }}</option
           >
         </select>
       </div>
     </div>
     <div class="row">
-      <div class="col-6"></div>
       <div class="col-6">
-        <select formControlName="service" class="form-control header-drop-down">
+      </div>
+      <div class="col-6">
+        <select
+          (change)="onServiceChange($event.target.value)"
+          class="form-control header-drop-down"
+        >
           <option
             *ngFor="let obj of constant.SERVICES"
-            value="{{ obj?.service_type_id }}"
+            [value]="obj?.service_type_id"
+            [selected]="obj?.service_type_id == servData?.service"
             >{{ obj?.name }}</option
           >
         </select>

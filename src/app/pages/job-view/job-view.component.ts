@@ -54,7 +54,7 @@ export class JobViewComponent implements OnInit {
     this.servData.attendance = "1";
     this.servData.checkInTime = "1";
     this.router.navigateByUrl(
-      `/${UrlService.CHECKLIST_HOSEREEL_SYSTEM_FIRE_EXTINGUISHER_SYSTEM}`
+      `/${UrlService.CHECKLIST_FIRE_ALARM_SYSTEM}`
     );
   }
 }

@@ -4,6 +4,6 @@ export class SaveJobRequest {
   public quatation_required: string;
   public quatation: string;
   public signature: string;
-  public jobId: string;
-  public seId: string;
+  public job_id: string;
+  public seid: string;
 }

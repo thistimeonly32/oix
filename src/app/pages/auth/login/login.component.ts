@@ -72,7 +72,7 @@ export class LoginComponent implements OnInit {
         Validators.required
       ),
       password: new FormControl(
-        environment.production ? null : "8565",
+        environment.production ? null : "123456",
         Validators.required
       )
     });

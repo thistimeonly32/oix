@@ -34,10 +34,11 @@ export class ApiService {
 
   saveJob(saveJobReq: SaveJobRequest): Promise<any> {
     return this.http
-      .post(`${environment.apiURL}/Save_job`, SaveJobRequest)
+      .post(`${environment.apiURL}/Save_job`, saveJobReq)
       .toPromise() as Promise<any>;
   }
 
+  // Hosereel System & Fire Extinguisher System
   saveUpdateService4(service4Req: Service4RequestResponse): Promise<any> {
     return this.http
       .post(
@@ -47,11 +48,79 @@ export class ApiService {
       .toPromise() as Promise<any>;
   }
 
+  // Hosereel System & Fire Extinguisher System
   getService4(asJobId): Promise<Service4RequestResponse> {
     return this.http
       .get(
         `${environment.apiURL}/get_hosereel_extinguisherm_service_detail_by_assign_job_id/${asJobId}`
       )
       .toPromise() as Promise<Service4RequestResponse>;
+  }
+
+  // Fireman Intercom
+  saveUpdateService5(payload): Promise<any> {
+    return this.http
+      .post(`${environment.apiURL}/fireman_intercom_system_service`, payload)
+      .toPromise() as Promise<any>;
+  }
+
+  // Fireman Intercom
+  getService5(asJobId): Promise<any> {
+    return this.http
+      .get(
+        `${environment.apiURL}/get_fireman_intercom_service_detail_by_assign_job_id/${asJobId}`
+      )
+      .toPromise() as Promise<any>;
+  }
+
+  // Fireman Intercom
+  saveUpdateService3(payload): Promise<any> {
+    return this.http
+      .post(`${environment.apiURL}/vesda_service`, payload)
+      .toPromise() as Promise<any>;
+  }
+
+  // Fireman Intercom
+  getService3(asJobId): Promise<any> {
+    return this.http
+      .get(
+        `${environment.apiURL}/get_vesda_service_detail_by_assign_job_id/${asJobId}`
+      )
+      .toPromise() as Promise<any>;
+  }
+
+  // Fire Alarm System
+  saveUpdateService1(payload): Promise<any> {
+    return this.http
+      .post(`${environment.apiURL}/fire_alarm_service`, payload)
+      .toPromise() as Promise<any>;
+  }
+
+  // Fire Alarm System
+  getService1(asJobId): Promise<any> {
+    return this.http
+      .get(
+        `${environment.apiURL}/get_fire_alarm_service_detail_by_assign_job_id/${asJobId}`
+      )
+      .toPromise() as Promise<any>;
+  }
+
+  // Sprinkler System & Hosereel System_Ion
+  saveUpdateService6(payload): Promise<any> {
+    return this.http
+      .post(
+        `${environment.apiURL}/sprinkler_hosereel_system_ion_service`,
+        payload
+      )
+      .toPromise() as Promise<any>;
+  }
+
+  // Sprinkler System & Hosereel System_Ion
+  getService6(asJobId): Promise<any> {
+    return this.http
+      .get(
+        `${environment.apiURL}/get_sprinkler_hosereel_ion_service_detail_by_assign_job_id/${asJobId}`
+      )
+      .toPromise() as Promise<any>;
   }
 }

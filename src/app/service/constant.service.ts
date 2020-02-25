@@ -15,22 +15,22 @@ export class ConstantService {
 
   public static ATTENDANCE = [
     {
-      id: '1',
+      id: "1",
       type: "Response Call"
     },
     {
-      id: '2',
+      id: "2",
       type: "Warranty/DLP"
     }
   ];
 
   public static CHECK_IN_TIME = [
     {
-      id: '1',
+      id: "1",
       type: "Office Hour"
     },
     {
-      id: '2',
+      id: "2",
       type: "After Office Hour"
     }
   ];
@@ -63,7 +63,35 @@ export class ConstantService {
     }
   ];
 
-  public static DEFAULT_SERVICE_ID = '4';
+  public static SERVICES_CONST = {
+    FIRE_AlARM_SYSTEM: {
+      service_type_id: "1",
+      name: "Fire Alarm System",
+      description: "Fire Alarm"
+    },
+    VESDA_SYSTEM: {
+      service_type_id: "3",
+      name: "Vesda System",
+      description: "Vesda System"
+    },
+    HOSEREEL_SYSTEM_FIRE_EXTINGUISHER_SYSTEM: {
+      service_type_id: "4",
+      name: "Hosereel System & Fire Extinguisher System",
+      description: "Hosereel System & Fire Extinguisher"
+    },
+    FIREMAN_INTERCOM_SYSTEM: {
+      service_type_id: "5",
+      name: "Fireman Intercom System",
+      description: "Fireman Intercom System"
+    },
+    SPRINKLER_SYSTEM_HOSEREEL_SYSTEM_ION: {
+      service_type_id: "6",
+      name: "Sprinkler System & Hosereel System_Ion",
+      description: "Sprinkler System & Hosereel System_Ion"
+    }
+  };
+
+  public static DEFAULT_SERVICE_ID = "1";
 
   constructor() {}
 }

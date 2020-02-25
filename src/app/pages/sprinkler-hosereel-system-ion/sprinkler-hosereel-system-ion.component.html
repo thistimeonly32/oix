@@ -1,3 +1,435 @@
-<p>
-  sprinkler-hosereel-system-ion works!
-</p>
+<ion-content>
+  <!-- Site wrapper -->
+  <div class="wrapper">
+    <!-- Navbar -->
+    <app-header></app-header>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+
+      <app-service-header></app-service-header>
+
+      <section class="content">
+        <!-- Default box -->
+
+        <form [formGroup]="servForm">
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 1 ? 'block' : 'none' }"
+          >
+            <div class="col-12 ">
+              <div class="card card-info card-outline">
+                <div class="card-header group-heading">
+                  <b>DRAINING OF SPRINKLER/HOSEREEL SYSTEM</b>
+                </div>
+                <div class="card-body q-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q1"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Check PERMIT TO WORK is approved by Owner and Main
+                          Contractor.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q2"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Inform Decam before and after draining and recharging
+                          work.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q3"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Inform supervising authority and isolate interlocking
+                          output zones before work commence.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q4"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Brief and coordinate with Chubb/other contractor
+                          before commence draining.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q5"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Check and ensure basic Personal Pretective Equipment
+                          for all workers.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q6"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Proceed with Authorize person to the control valve
+                          location and confirm working area.
+                        </span>
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q7"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Unlock the control valve room, unlock control valve
+                          and cv drain valve.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q8"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Proceed to drain control valve until pressure
+                          indicate Zero.psi.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 1 ? 'block' : 'none' }"
+          >
+            <div class="col-12 ">
+              <div class="card card-info card-outline">
+                <div class="card-header group-heading">
+                  <b>DISMANTLE OF FIRST SPRINKLER HEAD OR PIPES.</b>
+                </div>
+                <div class="card-body q-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q9"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Proceed to work area and ensure floors and equipments
+                          protection.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q10"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Check & ensure again the control valve drain is for
+                          the actual work area.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q11"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">Turn off nozzle.</span>
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q12"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Proceed to drain Balance water from pipe by opening
+                          sprinkler heads or pipes.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q13"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          If there is a pressure switch connected at control
+                          valve, then check at Fire Alarm Panel for any alarm
+                          signal received.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q14"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Proceed with the pipe work and ensure safety at all
+                          time.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 2 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info card-outline">
+                <div class="card-header group-heading">
+                  <b>RECHARGE OF SPRINKLER/HOSEREEL SYSTEM</b>
+                </div>
+                <div class="card-body q-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q15"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Check Exinguisher pressure gauge reading is correct
+                          within the green sector and that the safety pin is
+                          intact. Do not remove the safety pin until required,
+                          as it has been designed to break on removal.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q16"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Visual check the Fire Extiguisher if it does not have
+                          any corrosion.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q17"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Heft the cylinder and refill content if
+                          necessary.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q18"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Check the Fire Extinguisher if Dry/Powder by
+                          overturning it.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q19"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Remove the existing Fire Extinguisher label.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 2 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info card-outline">
+                <div class="card-header group-heading">
+                  <b>Normalization of Sprinkler/Hosereel system</b>
+                </div>
+                <div class="card-body q-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q20"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Check and ensure sprinkler pressure is maintain.
+                          Proceed to the work site and check no leak on new and
+                          existing pipe work.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q21"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Maintain a-half hour'Cooling' period before
+                          normalizing sprinkler/Hosereel system to normal
+                          operational order.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q22"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Check that all associated gate valves are strapped
+                          and locked.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q23"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Normalize all interlocking output zones after work
+                          and inform Decam of wotk completion.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 2 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info">
+                <div class="card-body">
+                  <div class="form-group nbm">
+                    <label class="question">Remarks: </label>
+                    <textarea
+                      formControlName="remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Exposure to Fire Risk : </label>
+                    <div>
+                      <input
+                        formControlName="exposure_fire_risk"
+                        type="radio"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Yes</label>&nbsp;&nbsp;
+                      <input type="radio" />
+                      <label class="q-font">&nbsp;No</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Follow-up Action : </label>
+                    <textarea
+                      formControlName="follow_up_action"
+                      class="form-control"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="row service-action">
+          <div class="col-6">
+            <button
+              [disabled]="loader"
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              *ngIf="currentPage == totalPage"
+              (click)="save()"
+            >
+              Save <i *ngIf="loader" class="fa fa-refresh fa-spin"></i>
+            </button>
+          </div>
+          <div class="col-3">
+            <a
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              (click)="back()"
+              *ngIf="currentPage != 1"
+            >
+              Back
+            </a>
+          </div>
+          <div class="col-3">
+            <a
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              (click)="next()"
+              *ngIf="currentPage != totalPage"
+            >
+              Next
+            </a>
+          </div>
+        </div>
+
+        <br />
+        <br />
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <app-service-footer></app-service-footer>
+  </div>
+  <!-- ./wrapper -->
+</ion-content>

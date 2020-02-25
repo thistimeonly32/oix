@@ -28,6 +28,7 @@ import { VesdaSystemComponent } from './pages/vesda-system/vesda-system.componen
 import { FiremanIntercomSystemComponent } from './pages/fireman-intercom-system/fireman-intercom-system.component';
 import { HosFireExtSystemComponent } from './pages/hos-fire-ext-system/hos-fire-ext-system.component';
 import { SprinklerHosereelSystemIonComponent } from './pages/sprinkler-hosereel-system-ion/sprinkler-hosereel-system-ion.component';
+import { ServiceFooterComponent } from './pages/service-footer/service-footer.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { SprinklerHosereelSystemIonComponent } from './pages/sprinkler-hosereel-
     VesdaSystemComponent,
     FiremanIntercomSystemComponent,
     HosFireExtSystemComponent,
-    SprinklerHosereelSystemIonComponent
+    SprinklerHosereelSystemIonComponent,
+    ServiceFooterComponent
   ],
   entryComponents: [],
   imports: [

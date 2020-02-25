@@ -78,13 +78,15 @@
     <footer class="main-footer">
       <div class="row">
         <div class="col-12">
-          <a
+          <button type="button"
+            [disabled]="!jobForm.valid || saveJobLoader"
+            (click)="saveJob()"
             style="color: white;"
             x
             class="btn btn-info btn-info btn-flat btn-block"
           >
-            Submit
-          </a>
+            Submit <i *ngIf="saveJobLoader" class="fa fa-refresh fa-spin"></i>
+        </button>
         </div>
       </div>
     </footer>

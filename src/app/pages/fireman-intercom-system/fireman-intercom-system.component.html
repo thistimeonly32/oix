@@ -1,3 +1,309 @@
-<p>
-  fireman-intercom-system works!
-</p>
+<ion-content>
+  <!-- Site wrapper -->
+  <div class="wrapper">
+    <!-- Navbar -->
+    <app-header></app-header>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+
+      <app-service-header></app-service-header>
+
+      <section class="content">
+        <!-- Default box -->
+
+        <form [formGroup]="servForm">
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 1 ? 'block' : 'none' }"
+          >
+            <div class="col-12 ">
+              <div class="card card-info card-outline">
+                <div class="card-header group-heading">
+                  <b>System Functionality</b>
+                </div>
+                <div class="card-body q-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q1"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Trouble signal with AC power off</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q2"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"> System LED ‘ON’</span>
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q3"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          System operates properly on battery backup</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q4"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Battery voltage (no load) ‘AC ON’</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q5"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"
+                          >Battery voltage (full load) ‘AC OFF’</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q6"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">Battery Charger voltage </span>
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q7"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          System operates properly on standby battery
+                          power</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q8"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          All signals operate on AC power</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q9"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          All signals operate on DC power</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q10"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Number of Fireman Intercom Handset
+                        </span>
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q11"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          All circuits checked for supervision</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q12"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Trouble indicators function properly</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q13"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Fireman Intercom Handset function test * State Details
+                          in Service Report Annex A</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q14"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font"> Lamp Test</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 2 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info">
+                <div class="card-body">
+                  <div class="form-group nbm">
+                    <label class="question"
+                      >Battery voltage (no load) ‘AC ON’ :
+                    </label>
+                    <input
+                      formControlName="battery_on_load"
+                      class="form-control"
+                    />
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question"
+                      >Battery voltage (full load) ‘AC OFF’ :
+                    </label>
+                    <input
+                      formControlName="battery_full_load"
+                      class="form-control"
+                    />
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Battery Charger voltage : </label>
+                    <input
+                      formControlName="battery_chargre"
+                      class="form-control"
+                    />
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question"
+                      >Number of Fireman Intercom Handset :
+                    </label>
+                    <input
+                      formControlName="no_of_fireman_intercom"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 2 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info">
+                <div class="card-body">
+                  <div class="form-group nbm">
+                    <label class="question">Remarks: </label>
+                    <textarea
+                      formControlName="remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Exposure to Fire Risk : </label>
+                    <div>
+                      <input
+                        formControlName="exposure_fire_risk"
+                        type="radio"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Yes</label>&nbsp;&nbsp;
+                      <input type="radio" />
+                      <label class="q-font">&nbsp;No</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Follow-up Action : </label>
+                    <textarea
+                      formControlName="follow_up_action"
+                      class="form-control"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="row service-action">
+          <div class="col-6">
+            <button
+              [disabled]="loader"
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              *ngIf="currentPage == totalPage"
+              (click)="save()"
+            >
+              Save <i *ngIf="loader" class="fa fa-refresh fa-spin"></i>
+            </button>
+          </div>
+          <div class="col-3">
+            <a
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              (click)="back()"
+              *ngIf="currentPage != 1"
+            >
+              Back
+            </a>
+          </div>
+          <div class="col-3">
+            <a
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              (click)="next()"
+              *ngIf="currentPage != totalPage"
+            >
+              Next
+            </a>
+          </div>
+        </div>
+
+        <br />
+        <br />
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <app-service-footer></app-service-footer>
+  </div>
+  <!-- ./wrapper -->
+</ion-content>

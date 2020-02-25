@@ -10,285 +10,843 @@
 
       <app-service-header></app-service-header>
 
-      <!-- <section class="content-header service-header">
-        <div class="row">
-          <div class="col-6">
-            <div class="form-group">
-              <label>
-                Client/Owner :
-              </label>
-              12345657
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="form-group">
-              <label>
-                Date :
-              </label>
-              12345657
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <div class="form-group">
-              <select class="form-control manage-drop">
-                <option>Attendance Type</option>
-                <option>option 1</option>
-                <option>option 2</option>
-                <option>option 3</option>
-                <option>option 4</option>
-                <option>option 5</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="form-group">
-              <select class="form-control">
-                <option>Check In Type</option>
-                <option>option 1</option>
-                <option>option 2</option>
-                <option>option 3</option>
-                <option>option 4</option>
-                <option>option 5</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6"></div>
-          <div class="col-6">
-            <div class="form-group">
-              <select class="form-control">
-                <option>Service Type</option>
-                <option>option 1</option>
-                <option>option 2</option>
-                <option>option 3</option>
-                <option>option 4</option>
-                <option>option 5</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- Main content -->
       <section class="content">
         <!-- Default box -->
 
-        <div class="row d-flex align-items-stretch">
-          <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-            <div class="card bg-light">
-              <!-- <div class="card-header text-muted border-bottom-0">
-                      Smoke Detectors
-                    </div> -->
-              <div class="card-body pt-0">
-                <div class="row">
-                  <div class="col-12">
-                    <h2 class="lead"><b>Smoke Detectors</b></h2>
-                    <!-- <p class="text-muted text-sm">
-                      <b>Description: </b> Need to work on this job.
-                    </p> -->
-                    <ul class="ml-0 mb-0 fa-ul text-muted">
-                      <li class="small">
-                        <b>Description:</b> Need to work on this job.
-                      </li>
-                      <li class="small"><b>Job ID:</b> SD-01245</li>
-                      <li class="small"><b>Client name:</b> James Aurther</li>
-                      <li class="small"><b>Job Date:</b> 05-03-2019</li>
-                      <li class="small">
-                        <b>Job Location:</b> MAP (FCC) & RP-1 (OCC) & RP-2 (GH)
-                      </li>
-                    </ul>
+        <form [formGroup]="servForm">
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 1 ? 'block' : 'none' }"
+          >
+            <div class="col-12 ">
+              <div class="card card-info card-outline">
+                <div class="card-body q-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q1"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Inform Decam before and after Fire Alarm
+                          maintainance.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q2"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Inform supervising authority and isolate interlocking
+                          output zones before testing.
+                        </span>
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q3"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Check the main ‘On’ LED light is lit up.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q4"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Check the condition and voltage of standby batteries
+                          under load (disconnect charger).
+                        </span>
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q5"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Check all printed circuit boards are secured in their
+                          mountings and examine for sign of over-heating and
+                          damaged tracks, dry joints etc.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q6"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Check all ribbon cables and cable terminations are
+                          secured and correctly.
+                        </span>
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q7"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Physical check on all manual call points and break
+                          glass for damaged cause by knocks, vandalism.
+                        </span>
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q8"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Function Test: To test and activate smoke/heat
+                          detector.Ensure all alarm signals are transmitted to
+                          the Main Fire Alarm Panel .</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q9"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Inform supervising authority and get permission to
+                          test all output devices</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q10"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Physical check and test all alarm bells.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q11"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Check and test all alarm sirens if any.
+                        </span>
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q12"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Check remote signals for lift homing, door activation,
+                          pressurizing fans etc. are in working order when
+                          system is on alarm.</span
+                        >
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q13"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Check and ensure that the alarm signals are received
+                          at Central.
+                        </span>
+                      </div>
+                      <div class="q-div">
+                        <input
+                          formControlName="checkbox_q14"
+                          type="checkbox"
+                          class="chk"
+                        />
+                        <span class="q-font">
+                          Check that system is left fully operational and clean
+                          before leaving premises.
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 2 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info">
+                <div class="card-header group-heading">
+                  <b>Fire Alarm System</b>
+                </div>
+                <div class="card-body">
+                  <div class="form-group nbm">
+                    <label class="question">Mains Supply/Charger : </label>
+                    <div>
+                      <input
+                        formControlName="q1_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q1_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q1_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Batteries : </label>
+                    <div>
+                      <input
+                        formControlName="q2_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q2_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q2_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Switches/Indicator/Audio : </label>
+                    <div>
+                      <input
+                        formControlName="q3_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q3_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q3_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 2 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info">
+                <div class="card-header group-heading">
+                  <b
+                    >INPUT/OUTPUT AUX SIGNAL * State Details in Service Report
+                    Annex A</b
+                  >
+                </div>
+                <div class="card-body">
+                  <div class="form-group nbm">
+                    <label class="question">Manual Call-Point : </label>
+                    <div>
+                      <input
+                        formControlName="q4_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q4_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q4_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Heat/Thermal Detectors : </label>
+                    <div>
+                      <input
+                        formControlName="q5_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q5_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q5_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Smoke Detectors : </label>
+                    <div>
+                      <input
+                        formControlName="q6_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q6_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q6_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Duct Detectors : </label>
+                    <div>
+                      <input
+                        formControlName="q7_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q7_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q7_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Beam Detectors : </label>
+                    <div>
+                      <input
+                        formControlName="q8_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q8_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q8_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Alarm Bell/Siren : </label>
+                    <div>
+                      <input
+                        formControlName="q9_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q9_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q9_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Beacon Lights : </label>
+                    <div>
+                      <input
+                        formControlName="q10_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q10_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q10_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Roller Shutters : </label>
+                    <div>
+                      <input
+                        formControlName="q11_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q11_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q11_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">A/C./Fan Shut Down : </label>
+                    <div>
+                      <input
+                        formControlName="q12_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q12_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q12_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Lift Homing/Door Control : </label>
+                    <div>
+                      <input
+                        formControlName="q13_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q13_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q13_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Fire Transmitting Signal : </label>
+                    <div>
+                      <input
+                        formControlName="q14_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q14_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q14_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">MV Fan Run/Trip : </label>
+                    <div>
+                      <input
+                        formControlName="q15_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q15_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q15_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Fire Damper open/Close : </label>
+                    <div>
+                      <input
+                        formControlName="q16_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q16_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q16_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 3 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info">
+                <div class="card-header group-heading">
+                  <b>Graphic System </b>
+                </div>
+                <div class="card-body">
+                  <div class="form-group nbm">
+                    <label class="question">System operates properly : </label>
+                    <div>
+                      <input
+                        formControlName="q17_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q17_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q17_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">System operates properly : </label>
+                    <div>
+                      <input
+                        formControlName="q18_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q18_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q18_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question"
+                      >Trouble supervision function properly :
+                    </label>
+                    <div>
+                      <input
+                        formControlName="q19_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q19_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q19_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question"
+                      >Non Alarm Supervision function properly :
+                    </label>
+                    <div>
+                      <input
+                        formControlName="q20_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q20_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q20_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Alarm Signal received : </label>
+                    <div>
+                      <input
+                        formControlName="q21_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q21_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q21_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">System Buzzer Silent : </label>
+                    <div>
+                      <input
+                        formControlName="q22_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q22_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q22_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">System Signal Silent : </label>
+                    <div>
+                      <input
+                        formControlName="q23_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q23_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q23_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question"> Alarm Signal Reset : </label>
+                    <div>
+                      <input
+                        formControlName="q24_check"
+                        type="checkbox"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Checked</label>&nbsp;&nbsp;
+                      <input formControlName="q24_tested" type="checkbox" />
+                      <label class="q-font">&nbsp;Tested</label>
+                    </div>
+                  </div>
+                  <div class="form-group nbm">
+                    <label class="question">Remark: </label>
+                    <textarea
+                      formControlName="q24_remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row"
+            [ngStyle]="{ display: currentPage == 3 ? 'block' : 'none' }"
+          >
+            <div class="col-12">
+              <div class="card card-info">
+                <div class="card-body">
+                  <div class="form-group nbm">
+                    <label class="question">Remarks: </label>
+                    <textarea
+                      formControlName="remarks"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Exposure to Fire Risk : </label>
+                    <div>
+                      <input
+                        formControlName="exposure_fire_risk"
+                        type="radio"
+                        checked
+                      />
+                      <label class="q-font">&nbsp;Yes</label>&nbsp;&nbsp;
+                      <input type="radio" />
+                      <label class="q-font">&nbsp;No</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group nbm">
+                    <label class="question">Follow-up Action : </label>
+                    <textarea
+                      formControlName="follow_up_action"
+                      class="form-control"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="row service-action">
+          <div class="col-6">
+            <button
+              [disabled]="loader"
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              *ngIf="currentPage == totalPage"
+              (click)="save()"
+            >
+              Save <i *ngIf="loader" class="fa fa-refresh fa-spin"></i>
+            </button>
+          </div>
+          <div class="col-3">
+            <a
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              (click)="back()"
+              *ngIf="currentPage != 1"
+            >
+              Back
+            </a>
+          </div>
+          <div class="col-3">
+            <a
+              style="color: white;"
+              class="btn btn-info btn-flat btn-block"
+              (click)="next()"
+              *ngIf="currentPage != totalPage"
+            >
+              Next
+            </a>
           </div>
         </div>
 
-        <div class="row d-flex align-items-stretch">
-          <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-            <div class="card bg-light">
-              <!-- <div class="card-header text-muted border-bottom-0">
-                      Smoke Detectors
-                    </div> -->
-              <div class="card-body pt-0">
-                <div class="row">
-                  <div class="col-12">
-                    <h2 class="lead"><b>Smoke Detectors</b></h2>
-                    <!-- <p class="text-muted text-sm">
-                      <b>Description: </b> Need to work on this job.
-                    </p> -->
-                    <ul class="ml-0 mb-0 fa-ul text-muted">
-                      <li class="small">
-                        <b>Description:</b> Need to work on this job.
-                      </li>
-                      <li class="small"><b>Job ID:</b> SD-01245</li>
-                      <li class="small"><b>Client name:</b> James Aurther</li>
-                      <li class="small"><b>Job Date:</b> 05-03-2019</li>
-                      <li class="small">
-                        <b>Job Location:</b> MAP (FCC) & RP-1 (OCC) & RP-2 (GH)
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row d-flex align-items-stretch">
-          <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-            <div class="card bg-light">
-              <!-- <div class="card-header text-muted border-bottom-0">
-                      Smoke Detectors
-                    </div> -->
-              <div class="card-body pt-0">
-                <div class="row">
-                  <div class="col-12">
-                    <h2 class="lead"><b>Smoke Detectors</b></h2>
-                    <!-- <p class="text-muted text-sm">
-                      <b>Description: </b> Need to work on this job.
-                    </p> -->
-                    <ul class="ml-0 mb-0 fa-ul text-muted">
-                      <li class="small">
-                        <b>Description:</b> Need to work on this job.
-                      </li>
-                      <li class="small"><b>Job ID:</b> SD-01245</li>
-                      <li class="small"><b>Client name:</b> James Aurther</li>
-                      <li class="small"><b>Job Date:</b> 05-03-2019</li>
-                      <li class="small">
-                        <b>Job Location:</b> MAP (FCC) & RP-1 (OCC) & RP-2 (GH)
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row d-flex align-items-stretch">
-          <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-            <div class="card bg-light">
-              <!-- <div class="card-header text-muted border-bottom-0">
-                      Smoke Detectors
-                    </div> -->
-              <div class="card-body pt-0">
-                <div class="row">
-                  <div class="col-12">
-                    <h2 class="lead"><b>Smoke Detectors</b></h2>
-                    <!-- <p class="text-muted text-sm">
-                      <b>Description: </b> Need to work on this job.
-                    </p> -->
-                    <ul class="ml-0 mb-0 fa-ul text-muted">
-                      <li class="small">
-                        <b>Description:</b> Need to work on this job.
-                      </li>
-                      <li class="small"><b>Job ID:</b> SD-01245</li>
-                      <li class="small"><b>Client name:</b> James Aurther</li>
-                      <li class="small"><b>Job Date:</b> 05-03-2019</li>
-                      <li class="small">
-                        <b>Job Location:</b> MAP (FCC) & RP-1 (OCC) & RP-2 (GH)
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row d-flex align-items-stretch">
-          <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-            <div class="card bg-light">
-              <!-- <div class="card-header text-muted border-bottom-0">
-                      Smoke Detectors
-                    </div> -->
-              <div class="card-body pt-0">
-                <div class="row">
-                  <div class="col-12">
-                    <h2 class="lead"><b>Smoke Detectors</b></h2>
-                    <!-- <p class="text-muted text-sm">
-                      <b>Description: </b> Need to work on this job.
-                    </p> -->
-                    <ul class="ml-0 mb-0 fa-ul text-muted">
-                      <li class="small">
-                        <b>Description:</b> Need to work on this job.
-                      </li>
-                      <li class="small"><b>Job ID:</b> SD-01245</li>
-                      <li class="small"><b>Client name:</b> James Aurther</li>
-                      <li class="small"><b>Job Date:</b> 05-03-2019</li>
-                      <li class="small">
-                        <b>Job Location:</b> MAP (FCC) & RP-1 (OCC) & RP-2 (GH)
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row d-flex align-items-stretch">
-          <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-            <div class="card bg-light">
-              <!-- <div class="card-header text-muted border-bottom-0">
-                      Smoke Detectors
-                    </div> -->
-              <div class="card-body pt-0">
-                <div class="row">
-                  <div class="col-12">
-                    <h2 class="lead"><b>Smoke Detectors</b></h2>
-                    <!-- <p class="text-muted text-sm">
-                      <b>Description: </b> Need to work on this job.
-                    </p> -->
-                    <ul class="ml-0 mb-0 fa-ul text-muted">
-                      <li class="small">
-                        <b>Description:</b> Need to work on this job.
-                      </li>
-                      <li class="small"><b>Job ID:</b> SD-01245</li>
-                      <li class="small"><b>Client name:</b> James Aurther</li>
-                      <li class="small"><b>Job Date:</b> 05-03-2019</li>
-                      <li class="small">
-                        <b>Job Location:</b> MAP (FCC) & RP-1 (OCC) & RP-2 (GH)
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <br />
+        <br />
       </section>
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
 
-    <footer class="main-footer">
-      <div class="row">
-        <div class="col-6">
-          <a
-            style="color: white;"
-            routerLinkActive="router-link-active"
-            class="btn btn-info btn-info btn-flat btn-block"
-            [routerLink]="['/save-job']"
-          >
-            <i class="far fa-eye"></i> Time Out
-          </a>
-        </div>
-        <div class="col-6">
-          <a
-            style="color: white;"
-            routerLinkActive="router-link-active"
-            class="btn btn-info btn-info btn-flat btn-block"
-          >
-            <i class="far fa-eye"></i> Break
-          </a>
-        </div>
-      </div>
-    </footer>
+    <app-service-footer></app-service-footer>
   </div>
   <!-- ./wrapper -->
 </ion-content>
